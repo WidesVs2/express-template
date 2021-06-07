@@ -10,13 +10,7 @@ const _ = require("lodash")
 const cors = require("cors")
 
 // Include routes
-const BillRoute = require("./routes/bills")
-const EventRoute = require("./routes/events")
-const NoteRoute = require("./routes/notes")
 const TaskRoute = require("./routes/tasks")
-const TransRoute = require("./routes/transactions")
-const ShortRoute = require("./routes/shortcuts")
-const iconFileRoute = require("./routes/iconFiles")
 
 // initialize App
 const app = express()
@@ -59,13 +53,7 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, "public")))
 
 // Declare routes
-app.use("/api/v1/bills", BillRoute)
-app.use("/api/v1/events", EventRoute)
-app.use("/api/v1/notes", NoteRoute)
 app.use("/api/v1/tasks", TaskRoute)
-app.use("/api/v1/transactions", TransRoute)
-app.use("/api/v1/shortcuts", ShortRoute)
-app.use("api/v1/icons", iconFileRoute)
 
 // Handle Production
 if (process.env.NODE_ENV === "production") {

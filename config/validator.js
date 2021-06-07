@@ -1,3 +1,7 @@
+/////////// WIP ////////
+// the below code is still being worked on, as such, this isnt icluded anywhere in the app
+// Once this is finished, this class will be exported to be used as a Validation process
+
 const keyStr = /[a-zA-Z_-]{3,20}/g // 3-20 chars, lower || upper || - || _
 const appNameStr = /[a-zA-Z_-]{3,60}/g //3-60 chars, lower || upper || - || _
 const usernameStr = /^[A-Za-z]\w{7,14}$/ // 7-16 characters, only chars, digits, underscore, ^letter
